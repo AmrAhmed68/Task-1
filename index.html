@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Store</h1>
+        <form class="search-container">
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <button id="search-button">Search</button>
+            <label for="category"></label>
+            <select name="category" id="category">
+                <option value="">All Categories</option>
+                <option value="men's clothing">Men</option>
+                <option value="women's clothing">Women</option>
+                <option value="jewelery">Jewelery</option>
+                <option value="electronics">Electronics</option>
+            </select>
+            <input type="number" id="min-price" name="min-price" min="0" placeholder="Min price"><br><br>
+            <input type="number" id="max-price" name="max-price" min="0" placeholder="Max price"><br><br>
+            <button id="apply-filter-button">Apply Filter</button>
+        </form>
+        
+        <form>
+            <label for="Sort"></label>
+            <select name="Sort" id="Sort">
+                <option value="price">Sort by price</option>
+                <option value="title">Sort by title</option>
+                <option value="category">Sort by category</option>
+            </select>
+        </form>
+
+        <h1>Shopping Cart</h1>
+        <ul id="cart-list"></ul>
+        <h2>Total Quantity: <span id="total-quantity">0</span></h2>
+        <h2>Total Price: $<span id="total-price">0.00</span></h2> 
+    </header>
+
+    <h2>Products</h2>
+    
+    <div id="products-container"></div>
+    <div class="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-button">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
